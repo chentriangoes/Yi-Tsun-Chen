@@ -6,6 +6,7 @@
 
 :root {
     --black:black;
+    --border:6px solid red;
 }
 
 body {
@@ -53,12 +54,12 @@ nav li {
     margin-left: 10px;
 }
 
-nav a:visited {
+nav a {
     color:silver;
 }
 
 nav a:hover {
-    color:red;
+    color: var(--red);
 }
 
 header h2 {
@@ -85,22 +86,26 @@ main {
 
 /*aboutme*/
 
-#aboutme {
+#aboutme,
+#projects {
     display:flex;
     margin-left: 60px;
+    margin-top: 60px;
 }
 
-#aboutme aside {
-  width:25%;
+#aboutme aside,
+#projects aside {
+  min-width:25%;
   height:360px;
   font-size: 36px;
   text-align: right;
-  border-right: 6px solid red;
+  border-right: var(--border);
   padding-right: 12px;
   /* min-width: 25%;*/
 }
 
-#aboutme article {
+#aboutme article,
+#youtube {
     margin-left: 30px;
     padding-right: 30px;
 }
@@ -110,6 +115,29 @@ aside .avatar {
 }
 
 /*projects*/
+
+#projects aside {
+    height: 680px;
+}
+
+#youtube section {
+    display: flex;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+iframe {
+    width:100%;
+}
+
+figcaption {
+    width: 50%;
+    margin-left: 20px;
+    display:flex;
+    align-items: flex-end;
+    font-weight: bold;
+}
+
 
 @media screen and (max-width: 992px) {
     nav {
@@ -142,26 +170,48 @@ aside .avatar {
         display:inline-block;
     }
 
-    #aboutme {
+    #aboutme,
+    #projects {
         display:block;
         margin-left: 20px;
     }
 
-    #aboutme br {
+    #aboutme h2 br,
+    #projects h2 br {
         display:none;
     }
 
-    #aboutme aside {
+    #aboutme aside,
+    #projects aside {
         width:100%;
         height:333px;
-        border-top: 6px solid red;
+        border-top: var(--border);
         padding-right: 12px;
+        /* min-width: 25%;*/
+      }
+
+    #projects aside {
+        border-left: var(--border);
+        border-right: none;
+        padding-left: 12px;
+        text-align: left;
         /* min-width: 25%;*/
       }
 
       #aboutme article {
         margin-left: 0px;
     }
+
+    #youtube section {
+        display: block;
+    }
+
+    iframe {
+        height:50vh;
+    }
+
+    figcaption {
+        width: 100%;
 }
 
 @media screen and (max-width: 576px) {
@@ -180,5 +230,7 @@ aside .avatar {
         right:0;
         bottom: 13%;
     }
+
+    
 
 }
