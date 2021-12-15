@@ -87,7 +87,9 @@ main {
 /*aboutme*/
 
 #aboutme,
-#projects {
+#projects,
+#works,
+#contactme {
     display:flex;
     margin-left: 60px;
     margin-top: 60px;
@@ -101,7 +103,6 @@ main {
   text-align: right;
   border-right: var(--border);
   padding-right: 12px;
-  /* min-width: 25%;*/
 }
 
 #aboutme article,
@@ -138,6 +139,127 @@ figcaption {
     font-weight: bold;
 }
 
+/*works*/
+
+#works aside,
+#contactme aside {
+  min-width:25%;
+  font-size: 36px;
+  text-align: right;
+  border-right: var(--border);
+  padding-right: 12px;
+}
+
+.top {
+    /*define height*/
+    opacity: 50%;
+    border-style: solid;
+    border-color:rgb(255, 0, 0);
+    border-width: 7px;
+    margin-bottom: 24px;
+    margin-left: 5px;
+    position:relative;
+    display: flex;
+}
+
+.rockoozi,
+.GIprize,
+.thesis,
+.paper01,
+.paper02 {
+    position:absolute;
+    left:0;
+    bottom:20%;
+    background-color: red;
+    color: white;
+    width: 260px;
+    font-size: x-large;
+    text-decoration: none;
+}
+
+.rockoozi span,
+.GIprize span,
+.thesis span,
+.paper01 span,
+.paper02 span {
+    font-size:large;
+    font-weight:lighter;
+}
+
+.bottom {
+    display:flex;
+}
+
+
+.GIprize,
+.thesis,
+.paper01,
+.paper02 {
+    width:200px;
+    font-size:large;
+    text-decoration:none;
+}
+
+.thesis {
+   width:150px; 
+}
+
+.paper01 {
+    width: 96px; 
+}
+
+.paper02 {
+    width:180px;
+}
+
+.left,
+.right {
+    display: flex;
+    flex-direction: column;
+    margin-right: 5px;
+}
+
+.right {
+    margin-right:0px;
+    margin-left:5px;
+}
+
+.left section,
+.right section {
+    /*define height*/
+    opacity: 50%;
+    border-style: solid;
+    border-color:rgb(255, 0, 0);
+    border-width: 7px;
+    margin-bottom: 24px;
+    margin-left: 5px;
+    position:relative;
+    display:flex;
+}
+
+/*footer*/
+
+/*contact*/
+.platforms {
+    margin-left: 20px;
+    width: 100%;
+}
+
+.icons {
+    display:flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+}
+
+.icons a {
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+.source {
+    float:right;
+}
 
 @media screen and (max-width: 992px) {
     nav {
@@ -171,18 +293,23 @@ figcaption {
     }
 
     #aboutme,
-    #projects {
+    #projects,
+    #works,
+    #contactme {
         display:block;
         margin-left: 20px;
     }
 
     #aboutme h2 br,
-    #projects h2 br {
+    #projects h2 br,
+    #contactme h2 br {
         display:none;
     }
 
     #aboutme aside,
-    #projects aside {
+    #projects aside,
+    #works aside,
+    #contactme aside {
         width:100%;
         height:333px;
         border-top: var(--border);
@@ -190,7 +317,8 @@ figcaption {
         /* min-width: 25%;*/
       }
 
-    #projects aside {
+    #projects aside,
+    #contactme aside {
         border-left: var(--border);
         border-right: none;
         padding-left: 12px;
@@ -198,7 +326,7 @@ figcaption {
         /* min-width: 25%;*/
       }
 
-      #aboutme article {
+    #aboutme article {
         margin-left: 0px;
     }
 
@@ -212,6 +340,11 @@ figcaption {
 
     figcaption {
         width: 100%;
+    }
+
+    .bottom {
+        flex-wrap: wrap;
+    }
 }
 
 @media screen and (max-width: 576px) {
