@@ -376,7 +376,6 @@ figcaption {
         height:333px;
         border-top: var(--border);
         padding-right: 12px;
-        /* min-width: 25%;*/
       }
 
     #projects aside {
@@ -385,11 +384,14 @@ figcaption {
         border-right: none;
         padding-left: 12px;
         text-align: left;
-        /* min-width: 25%;*/
       }
 
     #aboutme article {
         margin-left: 0px;
+    }
+
+    #youtube {
+        margin-top: 50px;
     }
 
     #youtube section {
@@ -399,7 +401,7 @@ figcaption {
     iframe {
         height:50vh;
     }
-
+    
     figcaption {
         width: 100%;
     }
@@ -412,7 +414,6 @@ figcaption {
         height:100px;
     }
     
-    #youtube,
     #apps {
         margin-top: 20px;
     }
