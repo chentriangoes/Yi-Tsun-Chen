@@ -96,7 +96,7 @@ main {
 #aboutme aside,
 #projects aside {
   min-width:25%;
-  height:500px;
+  height:520px;
   font-size: 36px;
   text-align: right;
   border-right: var(--border);
